@@ -1,9 +1,9 @@
 import express from "express";
 import { studentRouter } from "./Day3/Routes/router.js";
-import cros from 'cros';
+import cors from 'cors';
 import dotenv from "dotenv";
 
-dotenv.config
+dotenv.config();
 
 const PORT = process.env.PORT
 
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 // middle wares
 
 app.use(express.json());
-app.use(cros())
+app.use(cors())
 
 // application middlewares
 
