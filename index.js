@@ -1,5 +1,6 @@
 import express from "express";
 import { studentRouter } from "./Day3/Routes/router.js";
+import cros from 'cros';
 import dotenv from "dotenv";
 
 dotenv.config
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 // middle wares
 
 app.use(express.json());
+app.use(cros())
 
 // application middlewares
 
